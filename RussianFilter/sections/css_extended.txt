@@ -624,6 +624,14 @@ dom.mail.ru#?#.sticky-springs__item > div.box:has(div[id^="trg-b-"])
 !
 ! e.mail.ru
 !
+! Блокировка боковой рекламы в списке писем.
+e.mail.ru#?#div:matches-css(z-index: |100|)
+! Уменьшение пустоты после блокировки боковой рекламы.
+e.mail.ru#$#div[style^="max-width:"] > div:first-child + div { margin-right: 0 !important; }
+e.mail.ru#$#div[style^="margin-right:"] > div:first-child + div { margin-right: 0 !important; }
+! Исправление стиля для возврата кнопки "Фильтр" на место.
+e.mail.ru#$#.portal-menu__group_float { float: left !important; }
+!
 go.mail.ru#?##js-topBlock > section > div[class$="_pto"]:has( > div)
 go.mail.ru#?##js-bottomBlock > section > div[class$="_mtb"]:has( > div)
 !
